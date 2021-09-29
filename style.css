@@ -18,6 +18,7 @@
     --very-pale-blue: hsl(225, 100%, 98%);
     --desaturated-blue: hsl(224, 23%, 55%);
     --dark-blue: hsl(223, 47%, 23%);
+    --purple: #766CF2;
 }
 
 /* global styles */
@@ -28,11 +29,6 @@
     padding: 0
 }
 
-a {
-    color: var(--desaturated-blue);
-    text-decoration: underline;
-}
-
 body {
     color: var(--desaturated-blue);
     font-family: 'Red Hat Display', Arial, sans-serif;
@@ -41,15 +37,21 @@ body {
     background-size: cover;
     background-color: var(--pale-blue);
     background-repeat: repeat-x;
-    /* FLEX */
     display: block;
 }
 
+h1, span {
+    color: var(--dark-blue);
+    font-weight: 900;
+}
 
-/* for layout purposes only - delete on completion */
+h1 {
+    font-size: 1.4em;
+}
 
-div {
-    border: 1px solid magenta;
+a {
+    color: var(--desaturated-blue);
+    text-decoration: underline;
 }
 
 
@@ -57,12 +59,11 @@ div {
 
 .content {
     margin: 50px auto;
-    width: 450px;
-    height: 600px;
-    background-color: var(--very-pale-blue);
+    width: 400px;
+    height: auto;
+    background-color: #ffffff;
     border-radius: 25px;
-    /* for layout only - delete on completion */ 
-    border: 1px dashed blue;
+    box-shadow: 2px 2px 50px var(--desaturated-blue);
 }
 
 
@@ -72,8 +73,8 @@ div {
     border-radius: 22px 22px 0px 0px;
     height: 100%;
     width: 100%;
-    object-fit: cover;
-    overflow: hidden;
+    /* object-fit: cover;
+    overflow: hidden; */
 }
 
 
@@ -84,32 +85,58 @@ div {
     padding: 50px 50px 25px 50px;
 }
 
-h1, h2 {
-    color: var(--dark-blue);
+.hero>h1 {
+    padding-bottom: 10px;
 }
-
-h1 {
-    font-size: 1.3em;
-}
-
-h2 {
-    font-size: 1.2em;
-}
-
 
 /* details section */
 
 .detail {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
 }
 
-.detail>a {
-    display: block;
+.price-wrap {
+    background-color: var(--very-pale-blue);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: auto;
+    gap: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 15px 25px;
 }
 
+.price-wrap-inner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.price-wrap span {
+    font-size: 1.1em;
+}
+
+.price-wrap div {
+    margin-right: auto;
+    font-size: 0.9em;
+}
+
+.price-wrap a {
+    color: var(--bright-blue);
+    font-size: 14px;
+}
+
+.price-wrap a:hover {
+    color: var(--purple);
+    text-decoration: none;
+}
 /* confirmation section */
 
 .confirm {
@@ -122,14 +149,23 @@ h2 {
     gap: 15px;
 }
 
+.confirm>span {
+    margin-bottom: 20px;
+}
+
 .confirm-btn {
     background-color: var(--bright-blue);
     color: var(--very-pale-blue);
-    font-weight: bold;
-    font-size: 1.1em;
+    font-weight: 900;
+    font-size: 0.9em;
+    width: 80%;
     margin: 10px 0px;
-    padding: 5px 15px;
-    border: 1px solid var(--bright-blue);
-    border-radius: 5px;
-    box-shadow: 2px 5px 10px 10px var(--pale-blue);
+    padding: 15px 15px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px 5px var(--pale-blue);
+}
+
+.confirm-btn:hover {
+    background-color: var(--purple);
 }
