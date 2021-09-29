@@ -15,6 +15,7 @@
 .DS_Store
 .prettierignore
 
-# Don't add the project set up readme file #
+
 README.md
 README-template.md
+wireframe.ai
