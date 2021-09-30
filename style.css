@@ -34,11 +34,22 @@ body {
     font-family: 'Red Hat Display', Arial, sans-serif;
     font-size: 16px;
     background-image: url("./images/pattern-background-desktop.svg");
-    background-size: cover;
+    background-size: repeat;
     background-color: var(--pale-blue);
     background-repeat: repeat-x;
     display: block;
 }
+
+@media only screen and (max-width: 400px) {
+    body {
+        background-image: url("./images/pattern-background-mobile.svg");
+    }
+    .content {
+        width: 80vw;
+        margin: 20px;
+    }
+}
+
 
 h1, span {
     color: var(--dark-blue);
